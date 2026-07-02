@@ -128,7 +128,7 @@ a {
 .section-kicker,
 .project-type,
 .project-year,
-.resume-label,
+.skills-label,
 .availability span {
   margin: 0 0 14px;
   color: var(--brass);
@@ -357,7 +357,7 @@ p {
   background: #f3eadb;
 }
 
-.resume-section {
+.skills-section {
   background: #fffaf7;
 }
 
@@ -372,17 +372,17 @@ p {
   margin-bottom: 4px;
 }
 
-.resume-section .section-heading {
+.skills-section .section-heading {
   align-items: end;
 }
 
-.resume-grid {
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
-.resume-card {
+.skills-card {
   min-height: 250px;
   padding: 26px;
   border: 1px solid var(--line);
@@ -391,43 +391,16 @@ p {
   box-shadow: var(--shadow);
 }
 
-.resume-preview {
-  flex: 0 0 clamp(130px, 15vw, 170px);
-  display: block;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
-}
-
-.resume-preview iframe {
-  display: block;
-  width: 100%;
-  height: clamp(92px, 11vw, 128px);
-  border: 0;
-  pointer-events: none;
-}
-
-.resume-preview span {
-  display: block;
-  padding: 9px 12px;
-  color: var(--teal-dark);
-  border-top: 1px solid var(--line);
-  font-weight: 800;
-  text-align: center;
-}
-
-.resume-label {
+.skills-label {
   display: block;
   margin-bottom: 4px;
 }
 
-.resume-card h3 {
+.skills-card h3 {
   margin-bottom: 5px;
 }
 
-.resume-card p {
+.skills-card p {
   margin: 0;
 }
 
@@ -715,7 +688,7 @@ p {
   .about-section,
     .contact-section,
     .intro-grid,
-    .resume-grid,
+    .skills-grid,
     .project-grid {
     grid-template-columns: 1fr;
   }
@@ -772,12 +745,8 @@ p {
     flex-direction: column;
   }
 
-  .resume-section .section-heading {
+  .skills-section .section-heading {
     align-items: stretch;
   }
 
-  .resume-preview {
-    flex: none;
-    width: min(100%, 260px);
-  }
 }
