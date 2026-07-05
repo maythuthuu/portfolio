@@ -372,6 +372,58 @@ p {
   margin-bottom: 4px;
 }
 
+.pcb-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 540px;
+  perspective: 1400px;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+}
+
+.pcb-stage-inline {
+  flex: 0 0 min(40vw, 420px);
+  min-height: 300px;
+  align-self: stretch;
+  background: transparent;
+}
+
+.pcb-stage:focus-visible {
+  box-shadow: 0 0 0 3px rgba(24, 135, 111, 0.2);
+}
+
+.pcb-stage:active {
+  cursor: grabbing;
+}
+
+.pcb-stage-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  width: min(420px, 90%);
+  height: 64px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 213, 174, 0.26) 0%, rgba(30, 213, 174, 0) 70%);
+  filter: blur(18px);
+}
+
+.pcb-model {
+  width: min(100%, 420px);
+  height: clamp(220px, 24vw, 300px);
+  background: transparent;
+  --progress-bar-color: transparent;
+}
+
+.pcb-model canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .skills-section .section-heading {
   align-items: end;
 }
@@ -734,6 +786,16 @@ p {
     width: calc(100% - 36px);
     margin: 0 18px 54px;
     padding: 132px 0 0;
+  }
+
+  .pcb-stage {
+    min-height: 360px;
+  }
+
+  .pcb-stage-inline {
+    flex: none;
+    width: 100%;
+    min-height: 280px;
   }
 
   .button {
